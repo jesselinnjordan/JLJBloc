@@ -1,7 +1,6 @@
 class AddTopicPosts < ActiveRecord::Migration
-  def up
-  end
-
-  def down
+  def change
+    add_column :posts, :topic_id, :integer
+    add_index :posts, :topic_id
   end
 end

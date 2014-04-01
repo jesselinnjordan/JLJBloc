@@ -28,8 +28,10 @@ ActiveRecord::Schema.define(:version => 20140324203324) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "user_id"
+    t.integer  "topic_id"
   end
 
+  add_index "posts", ["topic_id"], :name => "index_posts_on_topic_id"
   add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
 
   create_table "topics", :force => true do |t|
