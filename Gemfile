@@ -48,6 +48,9 @@ gem 'fog'
 
 gem 'figaro'
 
+gem 'will_paginate', '~> 3.0'
+
+
 
 
 # To use ActiveModel has_secure_password
