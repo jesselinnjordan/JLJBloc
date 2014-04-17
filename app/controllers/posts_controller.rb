@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def show
-    @topic = Topic.find(params[:topic_id])
-    @post = Post.find(params[:id])
+    @topic = Topic.find(params[:id])
+    @posts = @topic.posts.paginate(page: params[:page], per_page: 10)
   end
 
   def new
@@ -29,6 +29,7 @@ class PostsController < ApplicationController
       render :new
     end
   end
+  
 
   def update
     @topic = Topic.find(params[:topic_id])
@@ -40,6 +41,8 @@ class PostsController < ApplicationController
       flash[:error] = "There was an error saving the post. Please try again."
       render :new
     end
+  end
+
   def destroy
     @topic = Topic.find(params[:topic_id])
     @post = Post.find(params[:id])
