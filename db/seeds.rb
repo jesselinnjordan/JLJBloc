@@ -39,7 +39,7 @@ rand(4..10).times do
    
 
     rand(3..7).times do
-      p.comments.create(
+      body:Faker::Lorem.paragraphs(rand(1..2)).join("\n"),user:u)
         body: Faker::Lorem.paragraphs(rand(1..2)).join("\n"))
     end
     
