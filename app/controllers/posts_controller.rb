@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def show
-    @topic = Topic.find(params[:id])
-    @posts = @topic.posts.paginate(page: params[:page], per_page: 10)
+    @topic = Topic.find(params[:topic_id])
+    @post = Post.find(params[:id])
   end
 
   def new
