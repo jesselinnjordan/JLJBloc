@@ -1,0 +1,9 @@
+<% if can? :create, Vote %>
+<div class="vote-arrows">
+  <div class="pull-left">
+    <div><%= link_to " ", '#', class: 'icon-chevron-up' %></div>
+    <div><strong><%= post.points %></strong></div>
+    <div><%= link_to " ", '#', class: 'icon-chevron-down' %></div>
+  </div>
+</div>
+<% end %>
