@@ -52,7 +52,14 @@ gem 'will_paginate', '~> 3.0'
 
 gem 'omniauth-facebook'
 
+group :development, :test do
+  gem 'rspec-rails'
+end  
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails', '~> 4.0'
+end
 
 
 
